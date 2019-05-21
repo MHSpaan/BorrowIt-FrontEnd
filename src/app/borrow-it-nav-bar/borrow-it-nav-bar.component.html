@@ -1,16 +1,25 @@
-<nav class="navbar navbar-expand-md navbar-fixed-top navbar-dark bg-inverse">
-  <a class="navbar-brand" >BorrowIt</a>
+<nav class="navbar navbar-expand-md navbar-fixed-top navbar-light bg-inverse">
+  <a class="navbar-brand">BorrowIt</a>
   <div class="collapse navbar-collapse">
     <ul class="navbar-nav mr-auto">
       <li ngbDropdown class="nav-item dropdown">
-        <a ngbDropdownToggle class="nav-link dropdown-toggle" routerLink="branches" id="dropdown01">
-          Branches
-        </a>
-        <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01">
+        <a ngbDropdownToggle class="nav-link dropdown-toggle" id="Branchdropdown">Branches</a>
+        <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="Branchdropdown">
+          <a class="dropdown-item" routerLink="branches">Index</a>
           <a class="dropdown-item" routerLink="branches/create">Create</a>
           <a class="dropdown-item" routerLink="branches/delete">Delete</a>
           <a class="dropdown-item" routerLink="branches/edit">Edit</a>
           <a class="dropdown-item" routerLink="branches/details">Details</a>
+        </div>
+      </li>
+      <li ngbDropdown class="nav-item dropdown">
+        <a ngbDropdownToggle class="nav-link dropdown-toggle" id="Userdropdown">Users</a>
+        <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="Userdropdown">
+          <a class="dropdown-item" routerLink="users">Index</a>
+          <a class="dropdown-item" routerLink="users/create">Create</a>
+          <a class="dropdown-item" routerLink="users/delete">Delete</a>
+          <a class="dropdown-item" routerLink="users/edit">Edit</a>
+          <a class="dropdown-item" routerLink="users/details">Details</a>
         </div>
       </li>
     </ul>

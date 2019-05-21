@@ -42,7 +42,12 @@ import { IndexUsersComponent } from './Users/index-users/index-users.component';
       { path: 'branches/create', component: CreateBranchComponent },
       { path: 'branches/edit', component: EditBranchComponent },
       { path: 'branches/delete', component: DeleteBranchComponent },
-      { path: 'branches/details', component: DetailsBranchComponent }
+      { path: 'branches/details', component: DetailsBranchComponent },
+      { path: 'users', component: IndexUsersComponent },
+      { path: 'users/create', component: CreateUserComponent },
+      { path: 'users/edit', component: EditUserComponent },
+      { path: 'users/delete', component: DeleteUserComponent },
+      { path: 'users/details', component: DetailsUserComponent }
     ])
   ],
   providers: [],
