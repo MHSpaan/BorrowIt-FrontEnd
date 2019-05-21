@@ -1,0 +1,44 @@
+import { Routes } from '@angular/router';
+import { CreateBranchComponent } from './Branches/create-branch/create-branch.component';
+import { DeleteBranchComponent } from './Branches/delete-branch/delete-branch.component';
+import { DetailsBranchComponent } from './Branches/details-branch/details-branch.component';
+import { EditBranchComponent } from './Branches/edit-branch/edit-branch.component';
+import { IndexBranchesComponent } from './Branches/index-branches/index-branches.component';
+import { CreateUserComponent } from './Users/create-user/create-user.component';
+import { DeleteUserComponent } from './Users/delete-user/delete-user.component';
+import { DetailsUserComponent } from './Users/details-user/details-user.component';
+import { EditUserComponent } from './Users/edit-user/edit-user.component';
+import { IndexUsersComponent } from './Users/index-users/index-users.component';
+import { CreateOrderComponent } from './Orders/create-order/create-order.component';
+import { DeleteOrderComponent } from './Orders/delete-order/delete-order.component';
+import { DetailsOrderComponent } from './Orders/details-order/details-order.component';
+import { EditOrderComponent } from './Orders/edit-order/edit-order.component';
+import { IndexOrdersComponent } from './Orders/index-orders/index-orders.component';
+import { IndexCarsComponent } from './Cars/index-cars/index-cars.component';
+import { CreateCarComponent } from './Cars/create-car/create-car.component';
+import { DeleteCarComponent } from './Cars/delete-car/delete-car.component';
+import { DetailsCarComponent } from './Cars/details-car/details-car.component';
+import { EditCarComponent } from './Cars/edit-car/edit-car.component';
+
+export const routing: Routes = [
+    { path: 'branches', component: IndexBranchesComponent },
+    { path: 'branches/create', component: CreateBranchComponent },
+    { path: 'branches/edit', component: EditBranchComponent },
+    { path: 'branches/delete', component: DeleteBranchComponent },
+    { path: 'branches/details', component: DetailsBranchComponent },
+    { path: 'users', component: IndexUsersComponent },
+    { path: 'users/create', component: CreateUserComponent },
+    { path: 'users/edit', component: EditUserComponent },
+    { path: 'users/delete', component: DeleteUserComponent },
+    { path: 'users/details', component: DetailsUserComponent },
+    { path: 'orders', component: IndexOrdersComponent },
+    { path: 'orders/create', component: CreateOrderComponent },
+    { path: 'orders/edit', component: EditOrderComponent },
+    { path: 'orders/delete', component: DeleteOrderComponent },
+    { path: 'orders/details', component: DetailsOrderComponent },
+    { path: 'cars', component: IndexCarsComponent },
+    { path: 'cars/create', component: CreateCarComponent },
+    { path: 'cars/edit', component: EditCarComponent },
+    { path: 'cars/delete', component: DeleteCarComponent },
+    { path: 'cars/details', component: DetailsCarComponent }
+]

@@ -21,7 +21,27 @@
           <a class="dropdown-item" routerLink="users/edit">Edit</a>
           <a class="dropdown-item" routerLink="users/details">Details</a>
         </div>
-      </li>
+      </li>      
+      <li ngbDropdown class="nav-item dropdown">
+          <a ngbDropdownToggle class="nav-link dropdown-toggle" id="Userdropdown">Orders</a>
+          <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="Userdropdown">
+            <a class="dropdown-item" routerLink="orders">Index</a>
+            <a class="dropdown-item" routerLink="orders/create">Create</a>
+            <a class="dropdown-item" routerLink="orders/delete">Delete</a>
+            <a class="dropdown-item" routerLink="orders/edit">Edit</a>
+            <a class="dropdown-item" routerLink="orders/details">Details</a>
+          </div>
+        </li>      
+        <li ngbDropdown class="nav-item dropdown">
+            <a ngbDropdownToggle class="nav-link dropdown-toggle" id="Userdropdown">Cars</a>
+            <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="Userdropdown">
+              <a class="dropdown-item" routerLink="cars">Index</a>
+              <a class="dropdown-item" routerLink="cars/create">Create</a>
+              <a class="dropdown-item" routerLink="cars/delete">Delete</a>
+              <a class="dropdown-item" routerLink="cars/edit">Edit</a>
+              <a class="dropdown-item" routerLink="cars/details">Details</a>
+            </div>
+          </li>
     </ul>
   </div>
 </nav>
