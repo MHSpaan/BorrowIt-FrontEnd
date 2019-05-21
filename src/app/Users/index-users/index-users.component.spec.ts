@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ShowBranchesComponent } from './show-branches.component';
+import { IndexUsersComponent } from './index-users.component';
 
-describe('ShowBranchesComponent', () => {
-  let component: ShowBranchesComponent;
-  let fixture: ComponentFixture<ShowBranchesComponent>;
+describe('IndexUsersComponent', () => {
+  let component: IndexUsersComponent;
+  let fixture: ComponentFixture<IndexUsersComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ShowBranchesComponent ]
+      declarations: [ IndexUsersComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ShowBranchesComponent);
+    fixture = TestBed.createComponent(IndexUsersComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
