@@ -1,22 +1,22 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CreateBranchComponent } from './branches/create-branch/create-branch.component';
-import { EditBranchComponent } from './branches/edit-branch/edit-branch.component';
-
 import { BorrowItNavBarComponent } from './borrow-it-nav-bar/borrow-it-nav-bar.component';
-import { RouterModule } from '@angular/router';
+import { CreateBranchComponent } from './Branches/create-branch/create-branch.component';
+import { DeleteBranchComponent } from './Branches/delete-branch/delete-branch.component';
+import { DetailsBranchComponent } from './Branches/details-branch/details-branch.component';
+import { EditBranchComponent } from './Branches/edit-branch/edit-branch.component';
+import { IndexBranchesComponent } from './Branches/index-branches/index-branches.component';
 import { CreateUserComponent } from './Users/create-user/create-user.component';
+import { DeleteUserComponent } from './Users/delete-user/delete-user.component';
 import { DetailsUserComponent } from './Users/details-user/details-user.component';
 import { EditUserComponent } from './Users/edit-user/edit-user.component';
-import { DeleteUserComponent } from './Users/delete-user/delete-user.component';
-import { DeleteBranchComponent } from './Branches/delete-branch/delete-branch.component';
-import { IndexBranchesComponent } from './Branches/index-branches/index-branches.component';
-import { DetailsBranchComponent } from './Branches/details-branch/details-branch.component';
 import { IndexUsersComponent } from './Users/index-users/index-users.component';
+
+
 
 @NgModule({
   declarations: [
