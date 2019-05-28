@@ -8,11 +8,13 @@ import { Branch } from '../branch';
   styleUrls: ['./index-branches.component.css']
 })
 export class IndexBranchesComponent implements OnInit {
-  branches;
-  constructor(private branchService: BranchService) {
-    branchService.getBranches();
+  branches$;
 
+  constructor(private branchService: BranchService) {
+    this.branches$ = branchService.getBranches();
   }
+
+
 
   ngOnInit() {
 
