@@ -1,0 +1,12 @@
+div {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.container {
+    border-right: 1px solid black;
+    max-width: 100%;
+    padding: 0px;
+    margin: 0px;
+
+}

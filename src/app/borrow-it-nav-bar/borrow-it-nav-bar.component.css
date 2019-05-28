@@ -1,0 +1,15 @@
+
+nav {
+    background-color: black;
+    margin:0px;
+    color: red;
+}
+
+.navbar-brand {
+color: white;
+
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}

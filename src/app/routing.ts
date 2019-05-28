@@ -19,8 +19,10 @@ import { CreateCarComponent } from './Cars/create-car/create-car.component';
 import { DeleteCarComponent } from './Cars/delete-car/delete-car.component';
 import { DetailsCarComponent } from './Cars/details-car/details-car.component';
 import { EditCarComponent } from './Cars/edit-car/edit-car.component';
+import { HomeComponent } from './home/home.component';
 
 export const routing: Routes = [
+    { path: '', component: HomeComponent },
     { path: 'branches', component: IndexBranchesComponent },
     { path: 'branches/create', component: CreateBranchComponent },
     { path: 'branches/edit', component: EditBranchComponent },

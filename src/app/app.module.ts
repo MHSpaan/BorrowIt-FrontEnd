@@ -7,6 +7,11 @@ import { AppComponent } from './app.component';
 import { BorrowItNavBarComponent } from './borrow-it-nav-bar/borrow-it-nav-bar.component';
 import { routing } from './routing';
 import { components } from './components';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './home/home.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AppConfig } from './config/config';
 
 
 
@@ -16,17 +21,22 @@ import { components } from './components';
     AppComponent,
     BorrowItNavBarComponent,
     components,
-
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    MatSidenavModule,
+    HttpClientModule,
+
     RouterModule.forRoot(
       routing
-    )
+    ),
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    AppConfig],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
