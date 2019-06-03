@@ -2,14 +2,20 @@
 nav {
     background-color: black;
     margin:0px;
-    color: red;
 }
 
 .navbar-brand {
 color: white;
+font-size: 2em;
 
 }
 
 .dropdown-toggle {
     cursor: pointer;
+}
+
+li>a {
+    color: red;
+    font-size: 1.6em;
+
 }
