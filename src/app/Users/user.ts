@@ -7,18 +7,13 @@ export class User extends BaseClass {
     lastName;
     infix;
     emailAddress;
-    passWord;
-    branchId;
     
-    constructor(item: {} = {}) {
+    constructor(item: {}) {
         super();
-        this.branchId = item[0]
-        this.firstName = item[1];
-        this.lastName = item[2];
-        this.id = item[3];
-        this.infix = item[4];
-        this.emailAddress = item[5];
-        this.passWord = item[6];
+        this.firstName = item['firstName'];
+        this.infix = item['infix'];
+        this.lastName = item['lastName'];
+        this.emailAddress = item['emailAddress'];
 
     }
 

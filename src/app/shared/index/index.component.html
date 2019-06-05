@@ -1,6 +1,5 @@
 <button class="btn btn-primary" routerLink="new">New</button>
-
-<table mat-table [dataSource]="items" multiTemplateDataRows class="mat-elevation-z8">
+<table mat-table [dataSource]="items" multiTemplateDataRows *ngIf="isLoaded" class="mat-elevation-z8">
   <ng-container matColumnDef="{{header}}" *ngFor="let header of headers">
     <th mat-header-cell *matHeaderCellDef> {{header}} </th>
 

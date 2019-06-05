@@ -11,7 +11,6 @@ export class BaseService<T extends BaseClass> {
         private http: HttpClient,
         private url: string
     ) {
-        console.log('constructor base');
     }
 
     create(entity: T) {

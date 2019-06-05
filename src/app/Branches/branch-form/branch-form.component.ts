@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { HttpService } from 'src/app/shared/http.service';
+import { FormService } from 'src/app/shared/form/form.service';
 import { Branch } from '../branch';
-import { FormInputComponent } from 'src/app/shared/form-input/form-input.component';
+import { HttpService } from 'src/app/shared/http.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-branch-form',
   templateUrl: './branch-form.component.html',
   styleUrls: ['./branch-form.component.css'],
 })
-export class BranchFormComponent extends FormInputComponent implements OnInit {
+export class BranchFormComponent extends FormService implements OnInit {
 
-  headers = Object.getOwnPropertyNames(new Branch());
-
+  types: string[] = [];
+  branch = new Branch({});
+  headers = Object.getOwnPropertyNames(new Branch({}));
 
   constructor(
     route: ActivatedRoute,
@@ -21,7 +22,12 @@ export class BranchFormComponent extends FormInputComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.item = new Branch(this.item);
+    if (this.id) {
+      this.getItemById(this.id).subscribe((i: {}) => {
+        this.branch = new Branch(i);
+      });
+    }
+    this.types[1] = 'select';
   }
 
 }

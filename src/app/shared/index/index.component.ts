@@ -10,20 +10,21 @@ export class IndexComponent implements OnInit {
 
   @Input('headers') headers: string[];
   items;
+  isLoaded = false;
 
   constructor(private httpService: HttpService) { }
 
   ngOnInit() {
     this.loadItems();
-    this.headers = this.headers.filter(header => !header.toLowerCase().includes('id'));
+    this.headers = this.headers;
 
   }
 
   loadItems() {
-    this.httpService.getAll()
-      .subscribe(items => {
-        this.items = items;
-      });
+    this.httpService.getAll().subscribe(i => {
+      this.items = i;
+      this.isLoaded = true;
+    });
   }
 
 }

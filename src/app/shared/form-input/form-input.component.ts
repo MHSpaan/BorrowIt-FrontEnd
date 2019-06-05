@@ -1,23 +1,35 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { FormService } from '../form/form.service';
-import { ActivatedRoute } from '@angular/router';
+import { Component, Input } from '@angular/core';
 import { HttpService } from '../http.service';
-import { isNgTemplate } from '@angular/compiler';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'form-input',
   templateUrl: './form-input.component.html',
   styleUrls: ['./form-input.component.css']
 })
-export class FormInputComponent extends FormService {
+export class FormInputComponent {
 
+  @Input('displayItem') displayItem;
+  @Input('types') types;
+  @Input('id') id;
   @Input('headers') headers;
-  @Input('item') item: {};
 
   constructor(
-    route: ActivatedRoute,
-    httpService: HttpService) {
-    super(route, httpService);
-   }
+    private httpService: HttpService,
+    private router: Router,
+    private route: ActivatedRoute) {
+  }
 
+  save(item) {
+    if (this.id) {
+      item.id = this.id;
+      this.httpService.update(item);
+    } else {
+      this.httpService.create(item);
+    }
+  }
+
+  delete(id) {
+    this.httpService.delete(id);
+  }
 }

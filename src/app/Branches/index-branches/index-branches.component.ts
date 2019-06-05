@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { HttpService } from 'src/app/shared/http.service';
 import { Branch } from '../branch';
 import { IndexComponent } from 'src/app/shared/index/index.component';
@@ -9,8 +9,8 @@ import { IndexComponent } from 'src/app/shared/index/index.component';
   styleUrls: ['./index-branches.component.css']
 })
 export class IndexBranchesComponent extends IndexComponent {
-  
-  headers = Object.getOwnPropertyNames(new Branch());
+
+  headers = Object.getOwnPropertyNames(new Branch({}));
   title = "branches";
 
   constructor(

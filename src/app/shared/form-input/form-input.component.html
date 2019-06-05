@@ -1,15 +1,13 @@
-<button type="button" *ngIf="id" class="btn btn-danger" (click)="httpService.delete(item.id)">Delete</button>
+<button type="button" *ngIf="id" class="btn btn-danger" (click)="httpService.delete(id)">Delete</button>
 <form #f="ngForm" (ngSubmit)="save(f.value)" class="example-form">
-  <div *ngFor="let itemvalue of item | keyvalue; let i = index" class="container">
-    <div *ngIf="!(headers[i] | lowercase).includes('id')" class="form-group">
+  <div *ngFor="let header of headers; let i = index" class="container">
 
-      <mat-form-field>
-        <input matInput #{{headers[i]}}="ngModel" [(ngModel)]="itemvalue.value" name="{{headers[i]}}"
-          id="{{headers[i]}}" type="text" class="form-control">
-        <mat-placeholder class="placeholder">{{headers[i]}}
-        </mat-placeholder>
-      </mat-form-field>
-    </div>
+    <mat-form-field>
+      <input type="{{types[i]}}" matInput #{{header}}="ngModel" [(ngModel)]="displayItem[header]" name="{{header}}"
+        id="{{header}}" class="form-control">
+      <mat-placeholder class="placeholder">{{header}}
+      </mat-placeholder>
+    </mat-form-field>
   </div>
 
   <button type="submit" class="btn btn-primary">Save</button>

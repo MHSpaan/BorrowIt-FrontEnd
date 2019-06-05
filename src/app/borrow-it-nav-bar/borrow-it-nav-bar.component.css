@@ -17,5 +17,6 @@ font-size: 2em;
 li>a {
     color: red;
     font-size: 1.6em;
+    margin:3px;
 
 }

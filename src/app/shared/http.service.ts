@@ -18,8 +18,9 @@ export class HttpService {
     ) {}
 
     create(entity) {
-        this.http.post(this.url, entity).subscribe();
-        this.router.navigate([this.urlRoute]);
+        this.http.post(this.url, entity).subscribe( () => {
+            this.router.navigate([this.urlRoute]);
+        });
     }
 
     getAll() {
@@ -32,20 +33,21 @@ export class HttpService {
     }
 
     delete(id: string) {
-        this.http.delete(this.url + id).subscribe();
-        this.router.navigate([this.urlRoute]);
+        this.http.delete(this.url + id).subscribe( () => {
+            this.router.navigate([this.urlRoute]);
+        });
     }
 
     update(entity) {
-        this.http.patch(this.url, entity).subscribe();
-        this.router.navigate([this.urlRoute]);
+        this.http.patch(this.url, entity).subscribe( () => {
+            this.router.navigate([this.urlRoute]);
+        });
     }
 
     private getUrl() {
         
         this.urlRoute = (this.route.snapshot.firstChild.url[0] + '/');
         this.url = 'api/' + this.urlRoute;
-        console.log('2');
     }
 
 }

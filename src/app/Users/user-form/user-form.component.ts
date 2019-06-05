@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
-import { FormInputComponent } from 'src/app/shared/form-input/form-input.component';
+import { FormService } from 'src/app/shared/form/form.service';
 import { ActivatedRoute } from '@angular/router';
 import { HttpService } from 'src/app/shared/http.service';
 
@@ -9,10 +9,12 @@ import { HttpService } from 'src/app/shared/http.service';
   templateUrl: './user-form.component.html',
   styleUrls: ['./user-form.component.css']
 })
-export class UserFormComponent extends FormInputComponent implements OnInit {
+export class UserFormComponent extends FormService implements OnInit {
 
-  headers = Object.getOwnPropertyNames(new User());
-
+  types;
+  user = new User({});
+  id;
+  headers = Object.getOwnPropertyNames(new User({}));
 
   constructor(
     route: ActivatedRoute,
@@ -21,7 +23,12 @@ export class UserFormComponent extends FormInputComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.item = new User(this.item);
+    if (this.id) {
+      this.getItemById(this.id).subscribe((i: {}) => {
+        this.user = new User(i);
+      });
+    }
+    this.types = [];
   }
 
 }

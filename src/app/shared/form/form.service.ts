@@ -8,34 +8,20 @@ import { HttpService } from '../http.service';
 export class FormService {
 
   id;
-  item = {};
 
   constructor(
     private route: ActivatedRoute,
     private httpService: HttpService) {
+      this.id = this.route.snapshot.paramMap.get('id'); }
 
-
-    this.getIdandItem();
-  }
-
-  getIdandItem() {
-    this.id = this.route.snapshot.paramMap.get('id');
-    if (this.id) {
-      this.getItem();
-    }
-  }
-
-  getItem() {
-    return this.httpService.getById(this.id).subscribe(item => {
-      this.item = item;
-    });
+  getItemById(id) {
+    return this.httpService.getById(id);
 
   }
 
   save(item) {
     console.log(item);
-    if (this.id) {
-      item.id = this.id;
+    if (item.id) {
       this.httpService.update(item);
     } else {
       this.httpService.create(item);

@@ -10,7 +10,7 @@ import { User } from '../user';
 })
 export class IndexUsersComponent extends IndexComponent {
 
-  headers = Object.getOwnPropertyNames(new User());
+  headers = Object.getOwnPropertyNames(new User({}));
   title = "users";
 
   constructor(
