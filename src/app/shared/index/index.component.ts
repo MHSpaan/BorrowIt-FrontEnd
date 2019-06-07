@@ -16,7 +16,6 @@ export class IndexComponent implements OnInit {
 
   ngOnInit() {
     this.loadItems();
-    this.headers = this.headers;
 
   }
 

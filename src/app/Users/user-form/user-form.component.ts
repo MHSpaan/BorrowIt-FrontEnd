@@ -11,7 +11,7 @@ import { HttpService } from 'src/app/shared/http.service';
 })
 export class UserFormComponent extends FormService implements OnInit {
 
-  types;
+  types: string[] = [];
   user = new User({});
   id;
   headers = Object.getOwnPropertyNames(new User({}));
@@ -28,7 +28,7 @@ export class UserFormComponent extends FormService implements OnInit {
         this.user = new User(i);
       });
     }
-    this.types = [];
+    this.types[3] = 'email';
   }
 
 }
